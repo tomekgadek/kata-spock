@@ -1,8 +1,39 @@
 package io.github.tomekgadek
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import io.github.tomekgadek.templates.CleanCode
+import io.github.tomekgadek.templates.Tdd
+import kotlin.random.Random
+
 fun main() {
 
-    println("Kotlin")
+    println("1) Clean Code Template ;)")
+
+    val cleanCode = CleanCode()
+
+    if(cleanCode.isCodeReadable()) {
+        cleanCode.beHappy();
+    } else {
+        cleanCode.refactor();
+    }
+
+    println("2) Tdd Template ;)")
+
+    // given
+    val tdd = Tdd();
+
+    // when
+    val method = tdd.rgr();
+
+    // then
+    method.contains("red");
+    method.contains("green");
+    method.contains("refactor");
+
+    println("3) Sentence Template ;)")
+
+    while(Random.nextInt(100) != 0) {
+        println("practice \nmakes \nperfect");
+        println("* * *")
+    }
+
 }
