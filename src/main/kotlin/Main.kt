@@ -1,5 +1,6 @@
 package io.github.tomekgadek
 
+import io.github.tomekgadek.lessons.toDragonSpeak
 import io.github.tomekgadek.templates.CleanCode
 import io.github.tomekgadek.templates.Tdd
 import kotlin.random.Random
@@ -36,4 +37,13 @@ fun main() {
         println("* * *")
     }
 
+    println("My all Kotlin lessons...")
+    runLessons()
+}
+
+fun runLessons() {
+
+    val message = "Slowo ostrzezenia: Nigdy nie pij Oddechu Smoka!"
+
+    println(toDragonSpeak(message))
 }
