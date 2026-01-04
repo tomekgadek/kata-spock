@@ -1,6 +1,17 @@
 package io.github.tomekgadek
 
+import io.github.tomekgadek.lessons.addOperationExpression
+import io.github.tomekgadek.lessons.addOperationTraditional
+import io.github.tomekgadek.lessons.countCharacters
+import io.github.tomekgadek.lessons.helloMyFriend
+import io.github.tomekgadek.lessons.maxFromArrayIteration
+import io.github.tomekgadek.lessons.maxFromArrayUsageLambda
+import io.github.tomekgadek.lessons.maxFromArrayUsageLibrary
+import io.github.tomekgadek.lessons.point
+import io.github.tomekgadek.lessons.rangeExamples
+import io.github.tomekgadek.lessons.sumDigits
 import io.github.tomekgadek.lessons.toDragonSpeak
+import io.github.tomekgadek.lessons.triangleArea
 import io.github.tomekgadek.templates.CleanCode
 import io.github.tomekgadek.templates.Tdd
 import kotlin.random.Random
@@ -43,7 +54,34 @@ fun main() {
 
 fun runLessons() {
 
+    // 1)
     val message = "Slowo ostrzezenia: Nigdy nie pij Oddechu Smoka!"
-
     println(toDragonSpeak(message))
+
+    println("---")
+
+    // 2)
+    countCharacters()
+    sumDigits()
+
+    println("---")
+
+    // 3)
+    rangeExamples()
+    println("Triangle area = ${triangleArea(2.0, 4.0)}")
+
+    helloMyFriend()
+
+    println("Add operation 1, addOperationExpression(1, 2) = ${addOperationExpression(1, 2)}")
+    println("Add operation 2, addOperationTraditional(1, 2) = ${addOperationTraditional(1, 2)}")
+
+    point(1)
+    point(1, 2)
+    point(1, 2, 3)
+
+    println("Max_1 = ${maxFromArrayIteration(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
+    println("Max_2 = ${maxFromArrayUsageLibrary(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
+    println("Max_3 = ${maxFromArrayUsageLambda(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
+
+    println("---")
 }
