@@ -2,6 +2,7 @@ package io.github.tomekgadek
 
 import io.github.tomekgadek.lessons.addOperationExpression
 import io.github.tomekgadek.lessons.addOperationTraditional
+import io.github.tomekgadek.lessons.carTests
 import io.github.tomekgadek.lessons.countCharacters
 import io.github.tomekgadek.lessons.helloMyFriend
 import io.github.tomekgadek.lessons.isPrime
@@ -105,5 +106,9 @@ fun runLessons() {
     println("---")
 
     mapTests()
+    println("---")
+
+    // 6)
+    carTests()
     println("---")
 }
