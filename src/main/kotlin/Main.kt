@@ -4,6 +4,7 @@ import io.github.tomekgadek.lessons.addOperationExpression
 import io.github.tomekgadek.lessons.addOperationTraditional
 import io.github.tomekgadek.lessons.countCharacters
 import io.github.tomekgadek.lessons.helloMyFriend
+import io.github.tomekgadek.lessons.isPrime
 import io.github.tomekgadek.lessons.maxFromArrayIteration
 import io.github.tomekgadek.lessons.maxFromArrayUsageLambda
 import io.github.tomekgadek.lessons.maxFromArrayUsageLibrary
@@ -82,6 +83,18 @@ fun runLessons() {
     println("Max_1 = ${maxFromArrayIteration(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
     println("Max_2 = ${maxFromArrayUsageLibrary(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
     println("Max_3 = ${maxFromArrayUsageLambda(arrayOf(1, 2, 3, 4, 5, -1, -2, -3))}")
+
+    println("---")
+
+    // 4)
+
+    println("1 to ${if(isPrime(1)) "jest" else "nie jest"} liczba pierwsza")
+    println("2 to ${if(isPrime(2)) "jest" else "nie jest"} liczba pierwsza")
+    println("3 to ${if(isPrime(3)) "jest" else "nie jest"} liczba pierwsza")
+    println("10 to ${if(isPrime(10)) "jest" else "nie jest"} liczba pierwsza")
+    println("19 to ${if(isPrime(19)) "jest" else "nie jest"} liczba pierwsza")
+    println("97 to ${if(isPrime(97)) "jest" else "nie jest"} liczba pierwsza")
+    println("99 to ${if(isPrime(99)) "jest" else "nie jest"} liczba pierwsza")
 
     println("---")
 }
