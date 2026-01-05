@@ -5,6 +5,8 @@ import io.github.tomekgadek.lessons.addOperationTraditional
 import io.github.tomekgadek.lessons.countCharacters
 import io.github.tomekgadek.lessons.helloMyFriend
 import io.github.tomekgadek.lessons.isPrime
+import io.github.tomekgadek.lessons.listTests
+import io.github.tomekgadek.lessons.mapTests
 import io.github.tomekgadek.lessons.maxFromArrayIteration
 import io.github.tomekgadek.lessons.maxFromArrayUsageLambda
 import io.github.tomekgadek.lessons.maxFromArrayUsageLibrary
@@ -96,5 +98,12 @@ fun runLessons() {
     println("97 to ${if(isPrime(97)) "jest" else "nie jest"} liczba pierwsza")
     println("99 to ${if(isPrime(99)) "jest" else "nie jest"} liczba pierwsza")
 
+    println("---")
+
+    // 5)
+    listTests()
+    println("---")
+
+    mapTests()
     println("---")
 }
