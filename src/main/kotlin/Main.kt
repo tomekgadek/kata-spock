@@ -1,23 +1,12 @@
 package io.github.tomekgadek
 
-import io.github.tomekgadek.lessons.addOperationExpression
-import io.github.tomekgadek.lessons.addOperationTraditional
-import io.github.tomekgadek.lessons.carTests
-import io.github.tomekgadek.lessons.countCharacters
-import io.github.tomekgadek.lessons.helloMyFriend
-import io.github.tomekgadek.lessons.isPrime
-import io.github.tomekgadek.lessons.listTests
-import io.github.tomekgadek.lessons.mapTests
-import io.github.tomekgadek.lessons.maxFromArrayIteration
-import io.github.tomekgadek.lessons.maxFromArrayUsageLambda
-import io.github.tomekgadek.lessons.maxFromArrayUsageLibrary
-import io.github.tomekgadek.lessons.point
-import io.github.tomekgadek.lessons.rangeExamples
-import io.github.tomekgadek.lessons.sumDigits
-import io.github.tomekgadek.lessons.toDragonSpeak
-import io.github.tomekgadek.lessons.triangleArea
+import io.github.tomekgadek.lessons.*
+import io.github.tomekgadek.observer.Controller
+import io.github.tomekgadek.observer.Model
+import io.github.tomekgadek.observer.View
 import io.github.tomekgadek.templates.CleanCode
 import io.github.tomekgadek.templates.Tdd
+import javax.swing.SwingUtilities
 import kotlin.random.Random
 
 fun main() {
@@ -111,4 +100,11 @@ fun runLessons() {
     // 6)
     carTests()
     println("---")
+
+    // Observer, Sing + AWT
+    SwingUtilities.invokeLater(Runnable {
+        val model = Model()
+        val view = View()
+        Controller(model, view)
+    })
 }
