@@ -1,5 +1,6 @@
 package io.github.tomekgadek
 
+import com.formdev.flatlaf.FlatLightLaf
 import io.github.tomekgadek.lessons.*
 import io.github.tomekgadek.observer.Controller
 import io.github.tomekgadek.observer.Model
@@ -7,6 +8,7 @@ import io.github.tomekgadek.observer.View
 import io.github.tomekgadek.templates.CleanCode
 import io.github.tomekgadek.templates.Tdd
 import javax.swing.SwingUtilities
+import javax.swing.UIManager
 import kotlin.random.Random
 
 fun main() {
@@ -102,6 +104,13 @@ fun runLessons() {
     println("---")
 
     // Observer, Sing + AWT
+
+    // Config Look&Feel
+    UIManager.setLookAndFeel(FlatLightLaf())
+    UIManager.put("Button.arc", 16)
+    UIManager.put("TextComponent.arc", 12)
+    UIManager.put("Component.focusWidth", 1)
+
     SwingUtilities.invokeLater(Runnable {
         val model = Model()
         val view = View()

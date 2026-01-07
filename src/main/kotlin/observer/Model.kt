@@ -6,16 +6,17 @@ import java.beans.PropertyChangeSupport
 class Model {
 
     private val propertyChange = PropertyChangeSupport(this)
-    var oldValue = 0
-    var newValue = 0
 
-    fun increment() {
-        newValue += 1
+    var oldValue = ""
+    var newValue = ""
+
+    fun calculate(mathOperation: String) {
+        newValue = mathOperation
         onChange(newValue)
     }
 
-    private fun onChange(newValue: Int) {
-        propertyChange.firePropertyChange(PropertyName.INCREMENT.name, oldValue, newValue)
+    private fun onChange(newValue: String) {
+        propertyChange.firePropertyChange(PropertyName.CALCULATED_VALUE.name, oldValue, newValue)
         this.oldValue = newValue
     }
 

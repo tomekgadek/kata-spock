@@ -8,17 +8,23 @@ class Controller(private val model: Model, private val view: View) {
 
     init {
 
-        view.buttonListener { evt ->
-            log.info("zmina modelu")
+        view.setEvalListener { evt ->
+            log.info("zmina modelu, obliczenia")
 
-            model.increment()
+            model.calculate(view.getExpression())
+        }
+
+        view.setClearListener { evt ->
+            log.info("zmiana modelu, czysci pole edycji")
+
+            view.clearExpression()
         }
 
         model.onChangeListener { evt ->
             log.info("model zmieniony, wiec aktualizuje widok")
 
-            if (PropertyName.INCREMENT.name == evt.propertyName) {
-                view.updateLabel(evt.newValue.toString())
+            if (PropertyName.CALCULATED_VALUE.name == evt.propertyName) {
+                view.setResult(evt.newValue.toString())
             }
         }
     }
