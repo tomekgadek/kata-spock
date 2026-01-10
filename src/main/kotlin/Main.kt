@@ -5,6 +5,7 @@ import io.github.tomekgadek.lessons.*
 import io.github.tomekgadek.observer.Controller
 import io.github.tomekgadek.observer.Model
 import io.github.tomekgadek.observer.View
+import io.github.tomekgadek.observer.rpn.RpnEvaluator
 import io.github.tomekgadek.templates.CleanCode
 import io.github.tomekgadek.templates.Tdd
 import javax.swing.SwingUtilities
@@ -103,7 +104,7 @@ fun runLessons() {
     carTests()
     println("---")
 
-    // Observer, Sing + AWT
+    // Observer, Swing + AWT
 
     // Config Look&Feel
     UIManager.setLookAndFeel(FlatLightLaf())
@@ -111,8 +112,14 @@ fun runLessons() {
     UIManager.put("TextComponent.arc", 12)
     UIManager.put("Component.focusWidth", 1)
 
+    /**
+        TODO: Brak pelnej implementacji ONP:
+            + zaimplementowac obsluge nawiasow '(' i ')'
+            + zaimplementowac obsluge operacji potegowania i pierwiastkowania
+            + zaimplementowac obsluge bledow od strony uzytkownika
+     */
     SwingUtilities.invokeLater(Runnable {
-        val model = Model()
+        val model = Model(RpnEvaluator())
         val view = View()
         Controller(model, view)
     })

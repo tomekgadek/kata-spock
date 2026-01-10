@@ -17,7 +17,7 @@ class Controller(private val model: Model, private val view: View) {
         view.setClearListener { evt ->
             log.info("zmiana modelu, czysci pole edycji")
 
-            view.clearExpression()
+            view.clearExpressionAndResult()
         }
 
         model.onChangeListener { evt ->

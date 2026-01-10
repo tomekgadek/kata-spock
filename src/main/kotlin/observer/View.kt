@@ -101,8 +101,9 @@ class View : JFrame() {
 
     fun getExpression(): String = expressionField.text
 
-    fun clearExpression() {
+    fun clearExpressionAndResult() {
         expressionField.text = ""
+        resultLabel.text = "0"
     }
 
     fun setResult(text: String) {

@@ -1,9 +1,10 @@
 package io.github.tomekgadek.observer
 
+import io.github.tomekgadek.observer.rpn.ExpressionEvaluator
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
 
-class Model {
+class Model(val reversePolishNotation: ExpressionEvaluator) {
 
     private val propertyChange = PropertyChangeSupport(this)
 
@@ -11,7 +12,7 @@ class Model {
     var newValue = ""
 
     fun calculate(mathOperation: String) {
-        newValue = mathOperation
+        newValue = reversePolishNotation.evaluate(mathOperation).toString()
         onChange(newValue)
     }
 
