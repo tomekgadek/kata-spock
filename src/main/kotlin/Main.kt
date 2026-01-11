@@ -104,6 +104,17 @@ fun runLessons() {
     carTests()
     println("---")
 
+    // 7)
+    println("factorialRecursion(0) = ${factorialRecursion(0)}")
+    println("factorialRecursion(1) = ${factorialRecursion(1)}")
+    println("factorialRecursion(5) = ${factorialRecursion(5)}")
+
+    println()
+
+    println("factorialIterative(0) = ${factorialIterative(0)}")
+    println("factorialIterative(1) = ${factorialIterative(1)}")
+    println("factorialIterative(5) = ${factorialIterative(5)}")
+
     // Observer, Swing + AWT
 
     // Config Look&Feel
