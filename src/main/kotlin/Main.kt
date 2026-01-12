@@ -115,6 +115,9 @@ fun runLessons() {
     println("factorialIterative(1) = ${factorialIterative(1)}")
     println("factorialIterative(5) = ${factorialIterative(5)}")
 
+    // 8)
+    runAllTests()
+
     // Observer, Swing + AWT
 
     // Config Look&Feel
