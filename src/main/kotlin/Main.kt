@@ -115,6 +115,15 @@ fun runLessons() {
     println("factorialIterative(1) = ${factorialIterative(1)}")
     println("factorialIterative(5) = ${factorialIterative(5)}")
 
+    println()
+
+    println("removeDigits(\"a1b2c3\") = ${removeDigits("a1b2c3")}")
+    println("removeDigitsIterative(\"a1b2c3\") = ${removeDigitsIterative("a1b2c3")}")
+
+    println()
+
+    println("insertSeparatorEveryTwoChars(\"abcde\", \"+\") = ${insertSeparatorEveryTwoChars("abcde", "+")}")
+
     // 8)
     runAllTests()
 
