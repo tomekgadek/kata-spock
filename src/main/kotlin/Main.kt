@@ -124,6 +124,10 @@ fun runLessons() {
 
     println("insertSeparatorEveryTwoChars(\"abcde\", \"+\") = ${insertSeparatorEveryTwoChars("abcde", "+")}")
 
+    println()
+
+    println("toAlternatingCaseWithoutSpaces(\"I love kotlin language.\") = ${toAlternatingCaseWithoutSpaces("I love kotlin language.")}")
+
     // 8)
     runAllTests()
 

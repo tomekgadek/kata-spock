@@ -42,3 +42,20 @@ fun insertSeparatorEveryTwoChars(text: String, separator: String): String =
             }
         }
     }
+
+// funkcja, ktora zamienia co drugi znak (ignorując spacje) na wielką literę, naprzemiennie.
+fun toAlternatingCaseWithoutSpaces(input: String): String {
+    val builder = StringBuilder()
+    var index = 1
+
+    for (ch in input) {
+        if (ch != ' ') {
+            builder.append(
+                if (index % 2 == 0) ch.lowercaseChar() else ch.uppercaseChar()
+            )
+            index++
+        }
+    }
+
+    return builder.toString()
+}
