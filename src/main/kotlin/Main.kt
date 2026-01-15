@@ -128,6 +128,11 @@ fun runLessons() {
 
     println("toAlternatingCaseWithoutSpaces(\"I love kotlin language.\") = ${toAlternatingCaseWithoutSpaces("I love kotlin language.")}")
 
+    println()
+
+    println("Kolokwium poprawkowe, narzedzia i srodowiska programistyczne (nisp), 1 rok:")
+    exam()
+
     // 8)
     runAllTests()
 

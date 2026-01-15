@@ -59,3 +59,25 @@ fun toAlternatingCaseWithoutSpaces(input: String): String {
 
     return builder.toString()
 }
+
+// kolokwium poprawkowe, narzedzia i srodowiska programistyczne (nisp), 1 rok
+fun exam() {
+    val digits = listOf(1, 3, 4, 5, 8, 10, 23)
+
+    var evenCounter = 0 // licznik liczb parzystych
+    var oddCounter = 0 // licznik liczb nieparzystych
+
+    val evenDigits = mutableListOf<Int>() // lista liczb parzystych
+    val oddDigits = mutableListOf<Int>() // lista liczb nieparzystych
+
+    // your code...
+    evenCounter++
+    oddCounter++
+
+    // rezultaty dla listy: [1, 3, 4, 5, 8, 10, 23].
+    println("digits: ${digits}") // [1, 3, 4, 5, 8, 10, 23]
+    println("evenCounter: ${evenCounter}") // 3
+    println("oddCounter: ${oddCounter}") // 4
+    println("evenDigits: ${evenDigits}") // [4, 8, 10]
+    println("oddDigits: ${oddDigits}") // [1, 3, 5, 23]
+}
