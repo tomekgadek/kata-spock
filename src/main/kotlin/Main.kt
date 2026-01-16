@@ -136,6 +136,17 @@ fun runLessons() {
     // 8)
     runAllTests()
 
+    // 9)
+
+    val assertionLibrary = AssertionLibrary()
+
+    val expectedValue = "Hello"
+    val actualValue = "World"
+
+    assertionLibrary.assertEquals(expectedValue, actualValue)
+    assertionLibrary.assertTrue(expectedValue.length >= actualValue.length)
+    assertionLibrary.printAssertionResults()
+
     // Observer, Swing + AWT
 
     // Config Look&Feel
