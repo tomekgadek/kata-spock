@@ -15,7 +15,7 @@ _Krótkie programy w języku Kotlin oraz testy w Spock Framework (Groovy)._
 6. [Testy **UserService** w Spock Framework](/src/test/groovy/tutorial/UserSpec.groovy),
 7. [Testy **Book** w Spock Framework](/src/test/groovy/tutorial/BookSpec.groovy).
 
-# Zagadnienia Kotlin
+## Zagadnienia Kotlin
 
 1. [Instrukcja 'when', czyli coś podobnego do 'switch'](/src/main/kotlin/lessons/lesson-01.kt),
 2. [Operacje na ciągach tekstowych](/src/main/kotlin/lessons/lesson-02.kt),
